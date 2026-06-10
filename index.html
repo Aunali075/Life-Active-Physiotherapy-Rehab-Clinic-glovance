@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Life Active | Advanced Physiotherapy & Rehab Clinic DHA Lahore
+    </title>
+    <meta
+      name="description"
+      content="Premier physiotherapy clinic in DHA Lahore. Specialized in Manual Therapy, Electrotherapy & Cupping. Restore movement with expert care."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: #ffffff;
+        color: #1a2c3e;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --deep-blue: #0a2b44;
+        --deep-blue-light: #1c3f5c;
+        --accent-cyan: #2c9cd4;
+        --accent-gold: #e6b450;
+        --gray-bg: #f6f9fc;
+        --gray-card: #ffffff;
+        --shadow-lg: 0 25px 45px -12px rgba(0, 0, 0, 0.12);
+        --shadow-md:
+          0 10px 25px -5px rgba(0, 0, 0, 0.05),
+          0 8px 10px -6px rgba(0, 0, 0, 0.02);
+        --border-rad: 2rem;
+        --border-rad-md: 1.25rem;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      /* Glassmorphic Nav */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(14px);
+        background: rgba(255, 255, 255, 0.92);
+        border-bottom: 1px solid rgba(10, 43, 68, 0.08);
+        transition: 0.3s;
+      }
+
+      .nav-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .logo h1 {
+        font-size: 1.7rem;
+        font-weight: 800;
+        background: linear-gradient(
+          135deg,
+          var(--deep-blue) 0%,
+          var(--accent-cyan) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: -0.3px;
+      }
+      .logo span {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--accent-cyan);
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--deep-blue);
+        transition: 0.2s;
+        font-size: 0.95rem;
+      }
+      .nav-links a:hover {
+        color: var(--accent-cyan);
+      }
+
+      .call-now {
+        background: var(--deep-blue);
+        padding: 10px 26px;
+        border-radius: 60px;
+        color: white !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.2s;
+        box-shadow: 0 5px 12px rgba(10, 43, 68, 0.15);
+      }
+      .call-now:hover {
+        background: var(--deep-blue-light);
+        transform: translateY(-2px);
+      }
+
+      /* Hero Section - modern grid */
+      .hero {
+        padding: 80px 0 80px;
+        background: radial-gradient(
+          ellipse at 80% 30%,
+          rgba(44, 156, 212, 0.05) 0%,
+          #ffffff 70%
+        );
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      .hero-badge {
+        background: rgba(44, 156, 212, 0.12);
+        display: inline-block;
+        padding: 6px 18px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: var(--accent-cyan);
+        margin-bottom: 1.5rem;
+      }
+      .hero h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--deep-blue);
+      }
+      .hero-tagline {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--accent-cyan);
+        border-left: 4px solid var(--accent-cyan);
+        padding-left: 1.2rem;
+        margin: 1.5rem 0;
+      }
+      .hero-text {
+        color: #4a5b6e;
+        margin-bottom: 2rem;
+        font-size: 1.05rem;
+      }
+      .btn-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        background: var(--deep-blue);
+        padding: 14px 32px;
+        border-radius: 40px;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        transition: 0.2s;
+        box-shadow: 0 8px 16px -8px rgba(10, 43, 68, 0.25);
+      }
+      .btn-primary:hover {
+        background: #0c3b5e;
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        border: 1.5px solid var(--deep-blue);
+        padding: 12px 28px;
+        border-radius: 40px;
+        font-weight: 700;
+        color: var(--deep-blue);
+        text-decoration: none;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .stat-item {
+        font-weight: 700;
+        color: var(--deep-blue);
+      }
+      .hero-img {
+        background: linear-gradient(145deg, #eff5fc, #ffffff);
+        border-radius: 2rem;
+        text-align: center;
+        padding: 2rem;
+        box-shadow: var(--shadow-lg);
+      }
+      .hero-img i {
+        font-size: 7rem;
+        color: var(--deep-blue);
+        opacity: 0.8;
+      }
+
+      /* Section headers */
+      .section-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 3rem;
+      }
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--deep-blue);
+      }
+      .section-header p {
+        color: #5f6f82;
+        font-size: 1.1rem;
+        margin-top: 0.75rem;
+      }
+
+      /* Services Premium Cards */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+      .service-card {
+        background: var(--gray-card);
+        border-radius: 1.8rem;
+        padding: 2rem;
+        transition: all 0.35s cubic-bezier(0.15, 0.75, 0.45, 1);
+        box-shadow: var(--shadow-md);
+        border: 1px solid rgba(0, 0, 0, 0.02);
+      }
+      .service-card:hover {
+        transform: translateY(-12px);
+        box-shadow: var(--shadow-lg);
+        border-color: rgba(44, 156, 212, 0.2);
+      }
+      .service-icon {
+        font-size: 2.8rem;
+        color: var(--accent-cyan);
+        margin-bottom: 1.5rem;
+      }
+      .service-card h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+      .service-sub {
+        font-weight: 600;
+        color: var(--accent-cyan);
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+      .service-card p {
+        color: #556b82;
+        line-height: 1.5;
+        margin-top: 0.5rem;
+      }
+
+      /* Why choose us - elevated */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+      .why-card {
+        background: var(--gray-bg);
+        padding: 2rem;
+        border-radius: 1.8rem;
+        text-align: center;
+        transition: 0.25s;
+      }
+      .why-icon {
+        background: var(--deep-blue);
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        border-radius: 50%;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 2rem;
+      }
+      .why-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+      }
+
+      /* extra testimonials block to increase richness */
+      .testimonials {
+        background: var(--gray-bg);
+      }
+      .testi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      .testi-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+      }
+      .testi-card i {
+        color: var(--accent-gold);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .testi-card p {
+        font-style: italic;
+        color: #2d3e50;
+        margin-bottom: 1.2rem;
+      }
+      .patient-name {
+        font-weight: 700;
+        color: var(--deep-blue);
+      }
+
+      /* location & contact dual premium */
+      .dual-section {
+        padding: 80px 0;
+      }
+      .two-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      .info-panel {
+        background: white;
+        border-radius: 1.8rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-md);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+      }
+      .info-panel i.main-icon {
+        font-size: 2.5rem;
+        color: var(--accent-cyan);
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+      .whatsapp-link {
+        background: #25d366;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 28px;
+        border-radius: 60px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: 0.2s;
+      }
+      .whatsapp-link:hover {
+        background: #128c7e;
+        transform: scale(1.02);
+      }
+
+      /* footer advanced */
+      .footer {
+        background: #051e2f;
+        color: #b0c4de;
+        padding: 3rem 0 2rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 1rem;
+      }
+      .footer-col p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .copyright {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .two-columns {
+          grid-template-columns: 1fr;
+        }
+        .nav-flex {
+          flex-direction: column;
+        }
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .hero h1 {
+          font-size: 2.4rem;
+        }
+        .container {
+          padding: 0 24px;
+        }
+      }
+      @media (max-width: 550px) {
+        .btn-group {
+          flex-direction: column;
+          width: 100%;
+        }
+        .btn-primary,
+        .btn-outline {
+          text-align: center;
+        }
+        .section-header h2 {
+          font-size: 1.9rem;
+        }
+      }
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-flex">
+        <div class="logo">
+          <h1>LIFE ACTIVE</h1>
+          <span>Physiotherapy & Rehab Clinic</span>
+        </div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#testimonials">Stories</a>
+          <a href="#location-contact">Visit</a>
+          <a href="#contact-now" class="call-now"
+            ><i class="fas fa-phone-alt"></i> +923004378529</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">
+            <i class="fas fa-certificate"></i> Award-Winning Clinic DHA
+          </div>
+          <h1>Life Active Physiotherapy & Rehab Clinic</h1>
+          <div class="hero-tagline">
+            “Restore Movement. Rebuild Strength. Reclaim Life.”
+          </div>
+          <p class="hero-text">
+            Advanced non-surgical solutions for pain relief, sports injuries,
+            post-op recovery, and chronic conditions. Led by senior
+            physiotherapists with 12+ years of experience.
+          </p>
+          <div class="btn-group">
+            <a href="#appointment-book" class="btn-primary"
+              ><i class="fas fa-calendar-week"></i> Book Appointment →</a
+            >
+            <a href="#services" class="btn-outline">Explore Therapies</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <i class="fas fa-user-md"></i> 2500+ Patients
+            </div>
+            <div class="stat-item"><i class="fas fa-star"></i> 4.9 Rating</div>
+            <div class="stat-item">
+              <i class="fas fa-clock"></i> Same-Day Slots
+            </div>
+          </div>
+        </div>
+        <div class="hero-img">
+          <i class="fas fa-lungs-virus"></i>
+          <p
+            style="font-weight: 600; margin-top: 1rem; color: var(--deep-blue)"
+          >
+            Modern, Evidence-Based Care
+          </p>
+          <small style="color: var(--accent-cyan)"
+            >Manual Therapy • Electrotherapy • Cupping</small
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Services Section - More detailed -->
+    <section id="services" style="padding: 80px 0">
+      <div class="container">
+        <div class="section-header">
+          <h2>Specialized Treatments</h2>
+          <p>Integrated techniques tailored to your unique recovery journey</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>Physiotherapy</h3>
+            <span class="service-sub">Manual Therapy</span>
+            <p>
+              Advanced hands-on joint mobilization, deep tissue release, and
+              fascial manipulation to restore mobility, reduce stiffness, and
+              accelerate healing. Ideal for back pain, frozen shoulder & sports
+              injuries.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-microchip"></i></div>
+            <h3>Physiotherapy</h3>
+            <span class="service-sub">Electrotherapy</span>
+            <p>
+              Cutting-edge TENS, Ultrasound, IFT & Laser therapy to relieve
+              nerve pain, muscle spasms, and promote tissue regeneration.
+              Drug-free pain management with fast results.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-fire"></i></div>
+            <h3>Cupping Therapy</h3>
+            <span class="service-sub">Dry & Dynamic Hijama</span>
+            <p>
+              Traditional cupping combined with modern techniques to release
+              deep knots, improve blood circulation, and enhance recovery.
+              Perfect for chronic fatigue, stiff neck, and athletic performance.
+            </p>
+          </div>
+        </div>
+        <div style="margin-top: 2.5rem; text-align: center">
+          <a
+            href="#appointment-book"
+            class="btn-primary"
+            style="background: var(--accent-cyan); box-shadow: none"
+            >Get Personalized Plan →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us - 3 points but extra details -->
+    <section id="why-us" style="background: var(--gray-bg); padding: 80px 0">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Life Active?</h2>
+          <p>Exceptional outcomes start with trust and expertise</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>Experienced Therapists</h3>
+            <p>
+              Registered physiotherapists with international certifications in
+              orthopedics and neuro-rehabilitation. Each plan is evidence-based
+              and results-driven.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-diagnoses"></i></div>
+            <h3>Modern Equipment</h3>
+            <p>
+              Class-IV laser, Compex electro-stimulation, shockwave therapy, and
+              digital posture analysis — we invest in technology that heals
+              faster.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-chalkboard-user"></i></div>
+            <h3>Personalized Treatment</h3>
+            <p>
+              No cookie-cutter plans. 1-on-1 attention, home exercise programs,
+              and lifestyle guidance for long-term wellness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section - extra to add depth -->
+    <section id="testimonials" style="padding: 70px 0">
+      <div class="container">
+        <div class="section-header">
+          <h2>Patient Stories</h2>
+          <p>Real recovery journeys at Life Active</p>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card">
+            <i class="fas fa-quote-left"></i>
+            <p>
+              "After 3 months of chronic lower back pain, manual therapy +
+              cupping at Life Active changed my life. I’m back to playing
+              cricket pain-free!"
+            </p>
+            <div class="patient-name">— Usman R., DHA Lahore</div>
+          </div>
+          <div class="testi-card">
+            <i class="fas fa-quote-left"></i>
+            <p>
+              "Electrotherapy sessions for my tennis elbow were surprisingly
+              effective. The team is professional, clean, and truly caring.
+              Highly recommended."
+            </p>
+            <div class="patient-name">— Sara K., Phase 5</div>
+          </div>
+          <div class="testi-card">
+            <i class="fas fa-quote-left"></i>
+            <p>
+              "I had tried everything for my sciatica; the personalized rehab
+              approach at Life Active finally brought relief. Now I can walk
+              without pain."
+            </p>
+            <div class="patient-name">— Ahmed M., Cantt</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location + Contact with WhatsApp, including full address -->
+    <section id="location-contact" class="dual-section">
+      <div class="container two-columns">
+        <div class="info-panel">
+          <i class="fas fa-location-dot main-icon"></i>
+          <h3 style="font-size: 1.8rem">Visit Our Clinic</h3>
+          <p style="margin: 1rem 0 0.5rem; font-size: 1.1rem">
+            <strong>Life Active Physiotherapy and Rehab Clinic</strong><br />
+            Hassan Medical Centre, Street 9,<br />
+            Main Boulevard DHA, Lahore, Pakistan
+          </p>
+          <p style="margin: 1rem 0">
+            <i class="fas fa-clock"></i> <strong>Timings:</strong> Mon–Sat 9:00
+            AM – 8:00 PM<br />
+            <i class="fas fa-car"></i> Free parking available at Hassan Medical
+            Centre
+          </p>
+          <a
+            href="https://maps.google.com/?q=Hassan+Medical+Centre+Street+9+Main+Boulevard+DHA+Lahore"
+            target="_blank"
+            style="
+              color: var(--accent-cyan);
+              font-weight: 600;
+              text-decoration: none;
+            "
+            ><i class="fas fa-map-pin"></i> Open in Maps →</a
+          >
+        </div>
+
+        <div class="info-panel" id="appointment-book">
+          <i class="fab fa-whatsapp main-icon" style="color: #25d366"></i>
+          <h3 style="font-size: 1.8rem">Let's Connect</h3>
+          <p>
+            Book an appointment or ask any question – our team responds within
+            minutes.
+          </p>
+          <a
+            href="https://wa.me/923001234567?text=Hi%20Life%20Active%2C%20I%20want%20to%20book%20an%20appointment%20for%20physiotherapy%20assessment"
+            target="_blank"
+            class="whatsapp-link"
+          >
+            <i class="fab fa-whatsapp fa-xl"></i> Chat on WhatsApp
+          </a>
+          <div style="margin-top: 1.8rem">
+            <p>
+              <i class="fas fa-phone-alt"></i>
+              <strong>Call us directly:</strong> +923004378529
+            </p>
+            <p><i class="fas fa-envelope"></i> care@lifeactivephysio.pk</p>
+          </div>
+          <div
+            style="
+              background: #eff5fb;
+              border-radius: 1rem;
+              padding: 0.8rem;
+              margin-top: 1rem;
+            "
+          >
+            <small
+              ><i class="fas fa-shield-alt"></i> 100% confidential
+              consultation</small
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra: pre-footer with insurance / professional note -->
+    <section style="background: var(--gray-bg); padding: 40px 0">
+      <div class="container" style="text-align: center">
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+          "
+        >
+          <span
+            ><i
+              class="fas fa-check-circle"
+              style="color: var(--accent-cyan)"
+            ></i>
+            Accepting Major Insurance Plans</span
+          >
+          <span
+            ><i class="fas fa-trophy" style="color: var(--accent-cyan)"></i>
+            Certified Sports Rehab Specialists</span
+          >
+          <span
+            ><i
+              class="fas fa-hand-holding-medical"
+              style="color: var(--accent-cyan)"
+            ></i>
+            Home Visit Available</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer enhanced -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Life Active Physio</h4>
+            <p>
+              Leading physiotherapy & rehab clinic in DHA Lahore focused on
+              restoring movement and quality of life.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <p>
+              <a href="#services" style="color: #b0c4de; text-decoration: none"
+                >Services</a
+              ><br />
+              <a href="#why-us" style="color: #b0c4de; text-decoration: none"
+                >Why Choose Us</a
+              ><br />
+              <a
+                href="#testimonials"
+                style="color: #b0c4de; text-decoration: none"
+                >Testimonials</a
+              ><br />
+              <a
+                href="#location-contact"
+                style="color: #b0c4de; text-decoration: none"
+                >Location</a
+              >
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Visit Us</h4>
+            <p>Hassan Medical Centre, Street 9, Main Boulevard DHA Lahore</p>
+            <p><i class="fas fa-phone-alt"></i> +923004378529</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            © 2025 Life Active Physiotherapy and Rehab Clinic — Restore
+            Movement. Rebuild Strength. Reclaim Life.
+          </p>
+          <p style="margin-top: 8px">
+            Professional care you can trust | Designed with excellence
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll for all internal anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId === "#" || !targetId) return;
+          const targetElem = document.querySelector(targetId);
+          if (targetElem) {
+            e.preventDefault();
+            targetElem.scrollIntoView({ behavior: "smooth", block: "start" });
+            // subtle highlight for contact panel if it's appointment
+            if (targetId === "#appointment-book") {
+              targetElem.style.transition = "0.2s";
+              targetElem.style.boxShadow = "0 0 0 4px rgba(44,156,212,0.4)";
+              setTimeout(() => {
+                targetElem.style.boxShadow = "";
+              }, 900);
+            }
+          }
+        });
+      });
+      // navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector(".navbar");
+        if (window.scrollY > 20)
+          nav.style.background = "rgba(255,255,255,0.96)";
+        else nav.style.background = "rgba(255,255,255,0.92)";
+      });
+      // Add phone number link for call now
+      const callBtns = document.querySelectorAll(".call-now");
+      callBtns.forEach((btn) => {
+        btn.setAttribute("href", "tel:+923004378529");
+      });
+    </script>
+  </body>
+</html>
